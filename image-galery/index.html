@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/favicon.ico"/>
     <title>Unsplash API</title>
@@ -11,16 +11,28 @@
 <body>
     <heder class="header">
       <div class="container">
-          <img alt="" src="./assets/png/logo.png" class="logo">
+          <img alt="" src="./assets/png/logo.svg" class="logo">
           <h1>Unsplash API</h1>
-          <input type="search" class="search" placeholder="Search..."></input>
+          <div class="search-box">
+            <form>
+              <input type="search" class="search" placeholder="Search..."> 
+              <button class="search-button">
+                <img alt="" src="assets/png/lupe.svg" class="lupe">
+              </button>
+            </input>
+           
+            </form>
+          </div>
       </div>
     </heder>
     <main>
 
     </main>
     <footer>
-
+      <div class="footer">
+        <p class="github">© 2022 <a href="https://github.com/y1ungspace">github</a></p>
+        <a  class="rss-logo" href="https://rs.school/js-stage0/"><img alt="" src="./assets/png/rss.svg" class="rss-logo"></a>
+      </div>
     </footer>
 </body>
 <script type="text/javascript" src="index.js"></script>

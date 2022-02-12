@@ -12,29 +12,121 @@ html {
 
 body {
   font-family: 'Comfortaa', cursive;
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-black);
   overflow-x: hidden;
 }
-
+@media (prefers-color-scheme: light){
+  body {
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+}
+@media (prefers-color-scheme: dark){
+  body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+} 
 :root {
-  --color-white: #ffffff;
-  --color-black: #000;
+  --color-white: rgb(254, 254, 254);
+  --color-black: #131313;
   --color-orange: #ffa800;
   --color-gray: rgb(169, 169,169);
+                     
+}
+h1{
+  font-size: 35px;
+}
+a { 
+  size: 14px;
+  color: inherit;
+  transition: 0.5s;
+}
+a:hover {
+  color: var(--color-orange)
+}
+a:link {
+  text-decoration: none!important;
+}
+div {
+  font-size: 14px;
 }
 /*<----------------------Header------------------------>*/
 .logo {
-  width: 32px;
+  height: 32px;
+  filter: invert(62%) sepia(46%) saturate(1226%) hue-rotate(0deg) brightness(103%) contrast(104%);
 }
 .search {
+  position: relative;
   width: 350px;
   height: 36px;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.30s ease-in-out;
+  border: 1px solid var(--color-gray);
 }
 .search ::placeholder {
    color: var(--color-gray);
    font-family: sans-serif;
-   font-size: 16px;
+}
+.search:focus {
+  box-shadow: 0 0 5px orange;
+}
+.search-button {
+  position: absolute;
+  right: 110px;
+  top: 27px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.lupe {
+  width: 16px;
+  color: transparent;
+  transition: 0.5s;
+}
+.lupe:hover {
+  filter: invert(62%) sepia(46%) saturate(1226%) hue-rotate(0deg) brightness(103%) contrast(104%);
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration { display: none; }
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 70px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-bottom: 5px solid var(--color-orange);
+}
+.search-box {
+  display: flex;
+  margin-left: auto;
 }
 /*<----------------------Main------------------------>*/
+
 /*<----------------------Footer------------------------>*/
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60px;
+  padding: 0px 100px;
+  border-top: 5px solid var(--color-orange);
+}
+.rss-logo {
+  display: flex;
+  margin-left: auto;
+  height: 50px;
+  transition: 0.8s;
+  filter: invert(8%) sepia(1%) saturate(0%) hue-rotate(359deg) brightness(97%) contrast(100%);
+}
+.rss-logo:hover {
+  filter: invert(62%) sepia(46%) saturate(1226%) hue-rotate(0deg) brightness(103%) contrast(104%);
+}
