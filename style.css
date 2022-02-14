@@ -70,8 +70,8 @@ div {
   border: 1px solid var(--color-gray);
 }
 .search ::placeholder {
-   color: var(--color-gray);
-   font-family: sans-serif;
+  color: var(--color-gray);
+  font-family: sans-serif;
 }
 .search:focus {
   box-shadow: 0 0 5px orange;
@@ -85,6 +85,7 @@ div {
   border: none;
 }
 .lupe {
+  src: url(./assets/png/lupe.svg);
   width: 16px;
   color: transparent;
   transition: 0.5s;
@@ -92,10 +93,7 @@ div {
 .lupe:hover {
   filter: invert(62%) sepia(46%) saturate(1226%) hue-rotate(0deg) brightness(103%) contrast(104%);
 }
-input::-webkit-search-decoration,
-input::-webkit-search-cancel-button,
-input::-webkit-search-results-button,
-input::-webkit-search-results-decoration { display: none; }
+
 .container {
   display: flex;
   flex-direction: row;
@@ -109,8 +107,26 @@ input::-webkit-search-results-decoration { display: none; }
   display: flex;
   margin-left: auto;
 }
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration { display: none; }
 /*<----------------------Main------------------------>*/
-
+main {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.img {
+  width: 380px;
+  height: 214px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.images {
+  margin: 0px 20px;
+}
 /*<----------------------Footer------------------------>*/
 .footer {
   display: flex;
