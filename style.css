@@ -7,14 +7,26 @@
     color: #fff;
   }
 body {
-        /* background: linear-gradient(-45deg,rgb(68, 218, 180), rgb(112, 201, 242),  rgb(179, 96, 117), rgb(253, 248, 177)); */
-        background: linear-gradient(-45deg,rgb(32, 32, 32), rgb(110, 110, 110),  rgb(173, 173, 173), rgb(255, 255, 255));
-        /* background: linear-gradient(-45deg,rgb(253, 0, 0), rgb(255, 123, 0),  rgb(250, 233, 0), rgb(0, 226, 113)); */
-        /* background: linear-gradient(-45deg,rgb(129, 123, 123), rgb(97, 129, 199),  rgb(135, 197, 156), rgb(177, 74, 218)); */
+        background: linear-gradient(-45deg,rgb(68, 218, 180), rgb(112, 201, 242),  rgb(179, 96, 117), rgb(253, 248, 177));
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
         min-height: 100vh;
     }
+body.theme1 {
+    background: linear-gradient(-45deg,rgb(32, 32, 32), rgb(110, 110, 110),  rgb(173, 173, 173), rgb(255, 255, 255));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+body.theme2 {
+    background: linear-gradient(-45deg,rgb(253, 0, 0), rgb(255, 123, 0),  rgb(250, 233, 0), rgb(0, 226, 113));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+body.theme3 {
+    background: linear-gradient(-45deg,rgb(129, 123, 123), rgb(97, 129, 199),  rgb(135, 197, 156), rgb(177, 74, 218));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
  @keyframes gradient {
         0% {
             background-position: 0% 50%;
@@ -27,26 +39,66 @@ body {
         }
     }
 h1 {
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    top: 25%;
     font-size: 100px;
     position: flex;
     text-align: center;
-    margin-top: 15%;
     transition: 5s;
 }
 h1:hover {
     filter:blur(5px);
 }
+h2 {
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    top: 20%;
+    font-size: 80px;
+    text-align: center;
+    transition: 5s;
+}
+h2:hover {
+    filter:blur(5px);
+    opacity: 0;
+    visibility: hidden;
+}
+h2.game {
+   opacity: 1;
+   visibility: visible;
+}
+h3 {
+    font-size: 40px;
+}
+h4 {
+    font-size: 20px;
+    margin-left: 5px;
+}
+p {
+    size: 40px;
+}
 .header-vanish {
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
     font-size: 100px;
     position: flex;
     text-align: center;
-    margin-top: 15%;
     transition: 2s;
     color: transparent;
     filter: blur(10px);
 }
 .link-icon {
     height: 30px;
+    padding: 2px;
     filter: invert(95%) sepia(95%) saturate(0%) hue-rotate(223deg) brightness(106%) contrast(107%);
     transition: 10s;
 }
@@ -55,7 +107,7 @@ h1:hover {
 }
 .link-container {
   position: absolute;
-  right: 0;
+  right: 5px;
   bottom: 0;
   display: flex;
   flex-direction: row;
@@ -64,11 +116,14 @@ h1:hover {
   align-items: center;
 }
 .start-button {
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    top: 50%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
-    margin-top: 20px;
     height: 70px;
     width: 200px;
     background-color: transparent;
@@ -87,11 +142,16 @@ h1:hover {
     box-shadow: 0px 0px 10px 1px #fff;
 } 
 .start-button-vanish {
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    top: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    margin-top: 20px;
     height: 70px;
     width: 200px;
     color: transparent;
@@ -145,11 +205,92 @@ h1:hover {
 .playground {
     display: flex;
     margin:auto;
-    margin-top: 5%;
     width: 710px;
     height: 540px;
     flex-wrap: wrap;
     gap: 5px;
     padding: 10px;
     perspective: 1000px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 5s;
+}
+.section {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.playground.game {
+   opacity: 1;
+   visibility: visible;
+}
+.result-box {
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    top: 40%;
+    height: 33%;
+    width: 33%;
+    background-color: transparent;
+    transition: 1s;
+    text-align: center;
+    transition: 3s;
+    opacity: 0;
+    visibility: hidden;
+}
+.result-box.game {
+    opacity: 1;
+    visibility: visible;
+}
+.again {
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    top: 60%;
+    display: block;
+    text-align: center;
+    height: 50px;
+    width: 150px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 3s;
+}
+.again:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+    }
+.again:hover {
+    filter: blur(1px);
+    box-shadow: 0px 0px 10px 1px #fff;
+} 
+.results {
+    opacity: 0;
+    visibility: hidden;
+    transition: 3s;
+}
+.results.game {
+   opacity: 1;
+   visibility: visible;
+}
+.changer {
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    background-image: url('./assets/gradient_white_48dp.svg');
+    border: none;
+    cursor: pointer;
+    transition: 3s;
+}
+.changer:hover {
+    filter: blur(1px);
 }
